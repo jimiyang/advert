@@ -1,0 +1,144 @@
+.tips{
+  text-align: left;padding-left: 30px;
+  .ico{font-size: 30px; vertical-align: middle;display: inline-block;margin-right: 22px;}
+  h1{font-size: 18px;color: #62C446;}
+  h1.error{color: #f00;}
+  p{font-size: 12px;color: #686E76;}
+}
+.dtitle{
+  padding: 5px 0;text-align: center;color: #666;
+}
+.detailBox{
+  width: 300px;padding:0 20px;
+  i{
+    font-style: normal;width: 110px;display:inline-block;
+  }
+  li{
+    margin: 10px 0;
+  }
+}
+.authenticationForm{
+  background: #fff;padding:10px;
+  .search{
+    display: flex;align-items: center;margin-top: 30px;
+    li{
+      display: flex;align-items: center;white-space: nowrap;margin-right: 20px;
+      div{height: 36px;line-height: 36px;}
+      .ml10{margin-left:10px;}
+    }
+  }
+  .auditinfo{
+    position: relative;padding-left:65px;margin-top:10px;font-size:12px;margin-bottom:0;
+    & > em {
+      position: absolute;left:0;top:0;
+    }
+  }
+  .accountAmount{
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 52px;
+    align-items: center;
+    padding-right:80px;
+    justify-content: space-between;
+    >div{
+      white-space: nowrap;
+      div{
+        color: #fff;border-radius: 8px;padding: 31px 51px 26px 51px;font-size: 36px;min-width: 260px;
+        display: inline-block;
+      }
+      div.accountItems{
+        background: -webkit-linear-gradient(left, #FFAF84, #F9698D);
+        background: -o-linear-gradient(right, #FFAF84, #F9698D);
+        background: -moz-linear-gradient(right, #FFAF84, #F9698D);
+        background: linear-gradient(to right, #FFAF84 , #F9698D);
+        margin-right: 30px;
+        h1{font-size: 13px;color: #fff;font-weight: normal;}
+      }
+      .lockAmount{
+        background: #F4F4F4;color: #657280;
+        h1{color: #657280;}
+      }
+    }
+    p{
+      white-space: nowrap; 
+      span{
+        display: inline-block;width: 120px; height: 36px;line-height: 36px;border-radius: 2px;cursor: pointer;
+        background-color: rgba(253, 145, 136, 1); color: #fff;margin-left: 30px;font-size: 14px;
+      }
+    }
+  }
+  .notice{
+    font-size: 14px;padding-top: 60px;padding-bottom: 34px;color: #000;
+  }
+  .title{
+    border-bottom: 1px solid #E9E9E9;font-size: 20px;color: #000;padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .mt5{margin-top: 5px;}
+  .ml20{margin-left: 20px;}
+  .pl150{padding-left: 150px}
+  .form{
+    li{height:60px;}
+    li.h90{height:90px;}
+    li.h150{height:150px;}
+    .name{
+      display: inline-block;width: 140px;text-align:right;margin-right: 10px;
+      vertical-align: top; margin-top: 6px;font-size: 13px;color: #3B4754;
+      > i {
+        color: #f00;margin-right: 6px;
+      }
+    }
+    .content{
+      display: inline-block;
+      .ipttxt, .select{width: 285px;}
+      .select2{width: 160px;}
+      .select3{width: 110px;}
+      >div{
+        margin-bottom: 0;
+      }
+    }
+    .amt{color: #f00;font-size: 20px;font-weight: bold;}
+    .uploadBtn{
+      display: inline-block;vertical-align: top;font-size: 10px;
+      color: #84898F;line-height: 20px;
+    }
+    .mask{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom: 0;
+      background: #000;
+      opacity: 0.5;
+    }
+  }
+}
+.pic{
+  text-align: center;
+  &-mask{background: #000;opacity: 0.5;position: fixed;left:0;right: 0;top:0;bottom: 0;z-index: 1;}
+  &-close{left: 50%;position: absolute;z-index: 8;top: 85px;text-align: right;font-size: 30px;color: #ccc;}
+  &-closex{width: 660px;margin-left: -307px;}
+  &-closey{width: 330px;margin-left: -146px;}
+  &-content{
+    position: absolute; left: 50%; top:100px;z-index: 8;width: 660px;margin-left: -350px;margin-top:24px;
+    .img{
+      img{width: 100%;height: 330px;}
+    }
+  }
+  &-btn{
+    //padding-top: 10px;text-align:center;position: fixed;bottom: 350px;background:#000;z-index: 999;;
+    position: absolute;z-index: 99;left: 0;right: 0;text-align: center;padding-top: 10px;
+    > div {
+      background: #fff;border-radius: 10px;display: inline-block;font-size: 14px;font-weight:normal;color:#666;
+      > span {
+        display: inline-block;padding:0 20px; margin: 3px 0;cursor: pointer;
+        &:first-child{border-right:1px solid #ccc;}
+      }
+    }
+  }
+  //margin-left:-124px;
+  &-xt{top: 460px;}
+  &-yt{top: 788px;}
+  
+}

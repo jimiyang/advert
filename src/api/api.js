@@ -1,0 +1,215 @@
+import axios from './instance';
+const url = window.location.hostname === 'localhost' ? `/base/` : '/'
+//登录
+export const login = params => axios.post(`${url}login`, params)
+//退出登录
+export const logout = params => axios.post(`${url}logout`, params)
+//验证码
+export const picVerify = params => axios.post(`${url}check/picVerify`, params)
+//注册
+export const register = params => axios.post(`${url}register`, params)
+//上传图片
+export const upload = params => axios.uploadFile(`${url}upload/file`, params)
+//完善个人信息
+export const addMerchantInfo = params => axios.post(`${url}api/merchant/add`, params)
+//更新个人信息
+export const updateMerchant = params => axios.post(`${url}api/ad/merchant/info/updateMerchant`, params)
+//修改密码
+export const updatePassword = params => axios.post(`${url}api/ad/merchant/info/updatePassword`, params)
+//修改手机号
+export const updatePhone = params => axios.post(`${url}api/ad/merchant/info/updatePhone`, params)
+//获取个人信息
+export const getByMerchantCodeInfo = params => axios.post(`${url}api/ad/merchant/info/getByMerchantCode`, params)
+//发送手机验证码【新增】
+export const msgVerify = params => axios.post(`${url}check/msgVerify`, params)
+//发送手机验证码【提现付款用】
+export const sendWithdrawCode = params => axios.post(`${url}sendWithdrawCode`, params)
+//校验手机验证码是否正确
+export const validateSmsCode = params => axios.post(`${url}api/ad/merchant/info/validateSmsCode`, params)
+//获取对应字典标签
+export const getDictByType = params => axios.post(`${url}api/dict/getDictByType`, params)
+//获取可用余额和冻结余额
+export const caQuery = params => axios.post(`${url}api/merchant/caQuery`, params)
+//客商余额
+export const querySettlementAmount = params => axios.post(`${url}api/admin/withdraw/querySettlementAmount`, params)
+//充值接口
+export const native = params => axios.post(`${url}api/topup/native`, params)
+//阅读数监控
+export const missionMonitorList = params => axios.post(`${url}api/monitor/detail`, params)
+//活动监控列表(广告主)
+export const activityMonitorList = params => axios.post(`${url}api/monitor/list`, params)
+//订单监控-公众号下拉列表(广告主)
+export const missionOrderAppIdList = params => axios.post(`${url}api/monitor/monitorAppIdList`, params)
+//活动--订单监控列表(广告主)
+export const monitorOrderList = params => axios.post(`${url}api/monitor/monitorOrderList`, params)
+//查询所有公众号(流量主使用)
+export const listApps = params => axios.post(`${url}flow/wechat/listapps`, params)
+//充值检测orderQuery
+export const orderQuery = params => axios.post(`${url}api/topup/orderQuery`, params)
+//创建活动(广告主)
+export const add = params => axios.post(`${url}api/ad/campaign/add`, params)
+//编辑活动(广告主)
+export const edit = params => axios.post(`${url}api/ad/campaign/edit`, params)
+//获取活动详情
+export const getById = params => axios.post(`${url}api/ad/campaign/getById`, params)
+//活动列表(广告主)
+export const list = params => axios.post(`${url}api/ad/campaign/list`, params)
+//获取统计总数
+export const getAdCampaignCountByPostStatus = params => axios.post(`${url}api/ad/campaign/getAdCampaignCountByPostStatus`, params)
+//获取文章素材管理列表
+export const articleList = params => axios.post(`${url}api/article/manage/list`, params)
+//获取文章详情
+export const getArticleById = params => axios.post(`${url}api/article/manage/getArticleById`, params)
+//提交推广或者保存草稿(广告主)
+export const updatePostContentById = params => axios.post(`${url}api/ad/campaign/updatePostContentById`, params)
+//修改活动状态(广告主)
+export const updatePostStatusById = params => axios.post(`${url}api/ad/campaign/updatePostStatusById`, params)
+//活动审核接口（天目）
+export const audit = params => axios.post(`${url}api/ad/campaign/audit`, params)
+//删除素材库素材(广告主)
+export const deleteArticleById = params => axios.post(`${url}api/article/manage/deleteArticleById`, params)
+//素材库编辑之前检测文章是否已推广(广告主)
+export const judgeArticleUseById = params => axios.post(`${url}api/article/manage/judgeArticleUseById`, params)
+//已接订单列表(广告主、流量主、天目)
+export const missionList = params => axios.post(`${url}api/flow/mission/list`, params)
+//天目后台修改公众号标签
+export const saveOrUpdateTag = params => axios.post(`${url}api/wechat/account/saveOrUpdateTag`, params)
+//订单明细(广告主)
+export const missionDetail = params => axios.post(`${url}api/flow/mission/missionDetail`, params)
+//已接订单详情(广告主)
+export const missiongetById = params => axios.post(`${url}api/ad/mission/getById`, params)
+//已接订单审核(广告主)
+export const checkMissionOrderById = params => axios.post(`${url}api/ad/mission/checkMissionOrderById`, params)
+//财务支出(广告主)
+export const topupList = params => axios.post(`${url}api/topup/list`, params)
+//消费记录(广告主)
+export const financeList = params => axios.post(`${url}admin/ad/finance/list`, params)
+//结算记录(广告主) /
+export const recordList = params => axios.post(`${url}api/settle/record/adList`, params)
+//活动收支明细(广告主)
+export const expenditureList = params => axios.post(`${url}ad/income/expenditure/list`, params)
+//查看订单详情(广告主)
+export const getByOrderNo = params => axios.post(`${url}api/topup/getByOrderNo`, params)
+//提交认证（广告主）
+export const adAuthSave = params => axios.post(`${url}api/ad/merchant/auth/save`, params)
+//认证详情(广告主)
+export const adAuthDetail = params => axios.post(`${url}api/ad/merchant/auth/get`, params)
+//提现申请----账户信息(广告主)
+export const getAdAccountBankInfo = params => axios.post(`${url}api/ad/withdraw/getAccountBankInfo`, params)
+//申请提现(广告主)
+export const AdapplyWithdraw = params => axios.post(`${url}api/ad/withdraw/applyWithdraw`, params)
+//提现详情(广告主)
+export const getAdWithdrawDetail = params => axios.post(`${url}api/ad/withdraw/getByOrderNo`, params)
+//提现列表(广告主)
+export const getAdWithdrawList = params => axios.post(`${url}api/ad/withdraw/list`, params)
+//可接订单列表(流量主)
+export const campaignList = params => axios.post(`${url}flow/campaign/list`, params)
+//已接订单详情(流量主)
+export const missionSettleDetail = params => axios.post(`${url}api/flow/mission/missionSettleDetail`, params)
+export const campaignDetail = params => axios.post(`${url}flow/campaign/campaignDetail`, params)
+//已接订单可取消(流量主、天目)
+export const updateMissionStatusById = params => axios.post(`${url}api/ad/mission/updateMissionStatusById`, params)
+//提现列表(流量主)
+export const getWithdrawList = params => axios.post(`${url}api/flow/withdraw/list`, params)
+//提现详情(流量主)
+export const getWithdrawDetail = params => axios.post(`${url}api/flow/withdraw/getByOrderNo`, params)
+//提交认证(流量主)
+export const authSave = params => axios.post(`${url}api/flow/merchant/auth/save`, params)
+//认证详情(流量主)
+export const authGetDetail = params => axios.post(`${url}api/flow/merchant/auth/get`, params)
+//再次认证检查手机号是否正确
+export const checkPhone = params => axios.post(`${url}check/phone`, params)
+//天目结算记录详情
+export const tmSettleDetails = params => axios.post(`${url}api/settle/record/tmSettleDetails`, params)
+//订单列表详情(管理员)
+export const missiongetTmById = params => axios.post(`${url}api/ad/mission/getTmById`, params)
+//订单订单详情(流量主)
+export const detail = params => axios.post(`${url}flow/campaign/detail`, params)
+//结算记录(流量主)
+export const flowFinanceList = params => axios.post(`${url}api/settle/record/flowList`, params)
+//接此广告(流量主)
+export const flowMissionAdd = params => axios.post(`${url}flow/mission/add`, params)
+//提现记录(流量主)
+export const historyList = params => axios.post(`${url}api/withdraw/historyList`, params);
+//提现申请(流量主)
+export const applyWithdraw = params => axios.post(`${url}api/flow/withdraw/applyWithdraw`, params)
+//提现页面-账户信息(流量主)
+export const getAccountBankInfo = params => axios.post(`${url}api/flow/withdraw/getAccountBankInfo`, params)
+//员工列表(管理员)
+export const employeeList = params => axios.post(`${url}api/employee/list`, params)
+//员工详情(管理员)
+export const employeeGetById = params => axios.post(`${url}api/employee/getById`, params)
+//添加员工(管理员)
+export const employeeAdd = params => axios.post(`${url}api/employee/add`, params)
+//编辑员工(管理员)
+export const employeeEdit = params => axios.post(`${url}api/employee/edit`, params)
+//广告主列表(管理员)
+export const merchantList = params => axios.post(`${url}api/merchant/list`, params)
+//编辑商户信息(管理员)
+export const merchantEdit = params => axios.post(`${url}api/merchant/edit`, params)
+//活动列表(管理员)
+export const checkAdCampaignList = params => axios.post(`${url}api/ad/campaign/checkAdCampaignList`, params)
+//公众号管理列表
+export const accountList = params => axios.post(`${url}api/wechat/account/list`, params)
+//移除和加入和名单
+export const updateAppBlackStatus = params => axios.post(`${url}api/wechat/account/updateAppBlackStatus`, params)
+//检查是否已加入黑名单
+export const checkIsBlack = params => axios.post(`${url}api/wechat/account/checkIsBlack`, params)
+//认证管理(天目)
+export const getMerchanAuthList = params => axios.post(`${url}api/admin/merchant/auth/list`, params)
+//认证详情(天目)
+export const getMerchanAuthDetail = params => axios.post(`${url}api/admin/merchant/auth/get`, params)
+//认证审核(天目)
+export const merchantAuthAudit = params => axios.post(`${url}api/admin/merchant/auth/audit`, params)
+//订单列表(管理员)订单统计数
+export const getMissionOrderTotal = params => axios.post(`${url}api/ad/mission/getMissionOrderTotal`, params)
+//订单列表查看接单阅读数(管理员)
+export const listReadCnt = params => axios.post(`${url}api/admin/data/adRead/listReadCnt`, params)
+//结算详情
+export const list4Settle = params => axios.post(`${url}manager/campaign/list4Settle`, params)
+//活动结算审核(管理员)
+export const settleCampaign = params => axios.post(`${url}api/flow/mission/settle`, params)
+//管理员查询提现列表(管理员)
+export const queryWithdrawManager = params => axios.post(`${url}api/admin/withdraw/list`, params)
+//账户提现详情(管理员)
+export const withdrawDetail = params => axios.post(`${url}api/admin/withdraw/getByOrderNo`, params)
+//提现审核(管理员)
+export const withdrawAudit = params => axios.post(`${url}api/admin/withdraw/audit`, params)
+//提现付款线下付款(管理员)
+export const withdrawPay = params => axios.post(`${url}api/admin/withdraw/pay`, params)
+//线上付款(管理员)
+export const onlinePay = params => axios.post(`${url}api/admin/withdraw/onlinePay`, params)
+//订单收益(管理员)
+export const tmList = params => axios.post(`${url}api/settle/record/tmList`, params)
+//提现收益(管理员)
+export const feeAmtList = params => axios.post(`${url}api/withdraw/feeAmtList`, params)
+////客商测试
+export const sso = params => axios.post(`${url}ssoCross`, params)
+//数据报表（订单报表、天目管理员）
+export const settleOrderList = params => axios.post(`${url}api/admin/statement/settleOrderList`, params)
+//广告主/流量主商户交易报表(天目管理员)
+export const transactionMerchantList = params => axios.post(`${url}api/admin/statement/transactionMerchantList`, params)
+//商户余额查询（广告主）
+export const newcaQuery = params => axios.post(`${url}api/merchant/caQuery`, params)
+//获取公众号粉丝总数(流量主)
+export const appNumber = params => axios.get(`${url}api/wechat/account/count`, params)
+//获取公众号列表(流量主)
+export const appList = params => axios.post(`${url}api/wechat/account/listByMerchantCode`, params)
+//获取公众号详情(流量主)
+export const queryDetailsByAppId = params => axios.post(`${url}api/wechat/account/queryDetailsByAppId`, params)
+//获取公众号审核(流量主)
+export const batchAuditWechatAccount = params => axios.post(`${url}api/wechat/account/batchAuditWechatAccount`, params)
+//可接单活动列表(流量主)
+export const flowCampaignList = params => axios.post(`${url}api/flow/campaign/list`, params)
+//接单详情详情(流量主)
+export const newcampaignDetail = params => axios.post(`${url}api/flow/campaign/campaignDetail`, params)
+//流量主--接单确认页--根据位置查询预估收益(流量主)
+export const newestimate = params => axios.post(`${url}api/flow/campaign/estimate`, params)
+//流量主--确认接单(流量主)
+export const newAdd = params => axios.post(`${url}api/flow/mission/add`, params)
+//已接单订单列表(天目，流量主，广告主详情(需再加campaignId))
+export const newMissionList = params => axios.post(`${url}api/flow/mission/list`, params)
+//认证-详情
+export const newAuthGet = params => axios.post(`${url}api/flow/merchant/auth/get`, params)
+//流量主接口
+export const fillOutArticleUrl = params => axios.post(`${url}api/flow/mission/fillOutArticleUrl` , params)

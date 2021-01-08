@@ -1,0 +1,42 @@
+
+.header{
+    width: 100%;
+    height: auto;
+}
+.wrapp{
+    padding: 10px;
+    background: #fff;
+}
+.card{
+    
+    width: 1000px;
+    height: 500px;;
+    background: red;
+}
+.card-p{
+    position: absolute;
+    top: 10px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d{
+    &-select{
+      display:flex;
+      align-items: center;
+      &>span:last-child{
+        flex:1;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+  
+      }
+    }
+    &-avatar{
+      margin-right:6px;
+      transform: scale(0.8);
+    }
+  }
+  

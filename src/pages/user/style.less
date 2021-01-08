@@ -1,0 +1,71 @@
+.user{
+  &-avatra{
+    & > div {
+      display: inline-block;font-size: 12px;margin: 0;vertical-align: top;
+    }
+    .img{text-align:center; margin:0;font-weight: normal;color:#64d;padding-top: 3px;cursor: pointer;}
+    .account {
+      padding-left:20px;
+      p{margin: 0; line-height: 2.9;}
+      .certi{
+        color: #0B9F46;display: inline-block;
+      }
+    }
+  }
+  &-tabs{
+    padding-top: 20px;
+  }
+  &-setInfo{
+    font-size: 12px;margin:0;
+    & > li{
+      border-bottom: 1px dashed #ccc;display: flex; justify-content: space-between;
+      padding: 33px 0;
+      h1{margin:0;font-weight: bold;}
+      p {
+        padding-left:85px;margin: 0;
+      }
+      .col {
+        display: flex;justify-content: flex-start; align-items: center;
+      }
+      .opeartion{
+        width:150px;text-align: left;
+        > span {
+          display: inline-block;
+          padding-right: 10px;
+        }
+        > a{
+          display: inline-block;
+          padding-left:10px;
+        }
+        .red{color: #f00}
+        .green{color: #0B9F46;}
+      }
+    }
+    & > li:first-child{padding-top: 20px;}
+  }
+  &-modify{
+    li{
+      padding-bottom: 20px;
+      > label {
+        display: inline-block;width:100px;text-align: right;padding-right:10px;color: #333;
+      }
+      > div{
+        display: inline-block;
+        span {
+          display: inline-block;color:#64d;cursor: pointer;
+        }
+        .ipt{
+          display: inline-block;width:320px;font-size: 12px;
+        }
+        .ico{font-size: 18px;color:#64d;cursor: pointer;margin: 0 5px;}
+      }
+    }
+  }
+  &-modifyInfo{
+    & > h1{font-weight: normal;color: #999;margin: 0; padding-bottom: 10px;font-size:14px;}
+    .phone{
+      color:#666;font-size:14px;padding:5px 0;margin-bottom:15px;
+      > p{margin: 0;}
+    }
+  }
+}
